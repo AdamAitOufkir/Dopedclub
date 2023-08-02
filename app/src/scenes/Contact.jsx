@@ -1,6 +1,10 @@
 import LineGradient from "../components/LineGradient";
 import { useForm } from "react-hook-form";
 import { motion } from "framer-motion";
+import PhoneInput from "react-phone-number-input";
+import { useState } from "react";
+
+
 
 const Contact = () => {
   const {
@@ -16,7 +20,7 @@ const Contact = () => {
       e.preventDefault();
     }
   };
-
+  const [value, setValue] = useState()
   return (
     <section id="contact" className="contact mt-32 mb-16 w-full">
       {/* HEADINGS */}
@@ -33,8 +37,8 @@ const Contact = () => {
       ></motion.div>
 
       {/* FORM & IMAGE */}
-      <div className="md:flex md:justify-between gap-2 mt-5">
-        <div class="flex flex-col ml-20">
+      <div className="md:flex mt-5">
+        <div class="flex flex-col">
           <motion.div
             initial="hidden"
             whileInView="visible"
@@ -44,17 +48,18 @@ const Contact = () => {
               hidden: { opacity: 0, y: 50 },
               visible: { opacity: 1, y: 0 },
             }}
-            className="flex justify-center mx-50 mb-20"
+            className="flex text-center mx-50 mb-20"
           >
             <div>
               <p className="font-poppins font-semibold text-4xl">
                 <span className="text-yellow">CONTACT US</span> TO GET STARTED
               </p>
-              <div className="flex md:justify-left mt-5">
+              <div className="flex justify-center align-center mt-5">
                 <LineGradient width="w-1/2" />
               </div>
             </div>
           </motion.div>
+
           <motion.div
             initial="hidden"
             whileInView="visible"
@@ -64,7 +69,7 @@ const Contact = () => {
               hidden: { opacity: 0, y: 50 },
               visible: { opacity: 1, y: 0 },
             }}
-            className="flex justify-left"
+            className="flex justify-center md:justify-start items-center sm:ml-2"
           >
             <div className="flex mb-10">
               <svg
@@ -95,7 +100,7 @@ const Contact = () => {
               hidden: { opacity: 0, y: 50 },
               visible: { opacity: 1, y: 0 },
             }}
-            className="flex justify-left "
+            className="flex justify-center md:justify-start items-center sm:ml-2"
           >
             <div className="flex mb-10">
               <svg
@@ -112,8 +117,8 @@ const Contact = () => {
                   d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z"
                 />
               </svg>
-              <p className="font-poppins font-semibold text-xl my-2">
-                +212 6969 69420
+              <p className="font-poppins font-semibold text-xl my-2 ">
+              05 20 64 21 65
               </p>
             </div>
           </motion.div>
@@ -126,9 +131,9 @@ const Contact = () => {
               hidden: { opacity: 0, y: 50 },
               visible: { opacity: 1, y: 0 },
             }}
-            className="flex justify-left"
+            className="flex justify-center md:justify-start items-center sm:ml-2"
           >
-            <div className="flex mb-10">
+            <div className="flex">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="h-11 w-11 mr-5"
@@ -141,7 +146,7 @@ const Contact = () => {
                 @Dopedclub
               </p>
             </div>
-          </motion.div>{" "}
+          </motion.div>
         </div>
 
         <div className="flex justify-center items-center">
@@ -160,17 +165,16 @@ const Contact = () => {
               alignItems: "center",
               justifyContent: "center",
             }}
-            className="basis-1/2 mt-10 md:mt-0  " // Add "items-center" to center horizontally
+            className="basis-1/2 mt-10 md:mt-0"
           >
             <form
+              className=""
               target="_blank"
               onSubmit={onSubmit}
-              action="https://formsubmit.co/e8a5bdfa807605332f809e5656e27c6e"
               method="POST"
             >
               <input
-                className="w-full bg-[#dbcdf3] rounded-full font-semibold placeholder-opaque-black p-3 text-black"
-                style={{ width: "100%" }}
+                className="bg-[#dbcdf3] rounded-full font-semibold placeholder-opaque-black p-3 text-black lg:w-full mx-auto"
                 type="text"
                 placeholder="NAME"
                 {...register("name", {
@@ -179,52 +183,51 @@ const Contact = () => {
                 })}
               />
               {errors.name && (
-                <p className="text-[#FF0000] mb-1">
+                <p className="text-[#FF0000] mt-1 absolute">
                   {errors.name.type === "required" && "This field is required."}
                   {errors.name.type === "maxLength" &&
                     "Max length is 100 char."}
                 </p>
               )}
               <input
-                className="w-full bg-[#dbcdf3] rounded-full font-semibold placeholder-opaque-black p-3 mt-10 text-black"
-                style={{ width: "100%" }}
-                type="text"
-                placeholder="EMAIL"
-                {...register("email", {
+                className="bg-[#dbcdf3] rounded-full font-semibold placeholder-opaque-black p-3 mt-10 text-black lg:w-full mx-auto"
+                type="tel" // Change the type to "tel" for phone number
+                placeholder="PHONE NUMBER" // Update the placeholder text
+                {...register("phoneNumber", {
                   required: true,
-                  pattern: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
+                  pattern: /^[0-9]{10,}$/i, // Update the pattern to match a 10-digit phone number
                 })}
               />
-              {errors.email && (
-                <p className="text-[#FF0000] mb-1">
-                  {errors.email.type === "required" &&
+              {errors.phoneNumber && (
+                <p className="text-[#FF0000] mt-1 absolute">
+                  {errors.phoneNumber.type === "required" &&
                     "This field is required."}
-                  {errors.email.type === "pattern" && "Invalid email address."}
+                  {errors.phoneNumber.type === "pattern" &&
+                    "Invalid phone number."}
                 </p>
               )}
+
               <textarea
-                className="w-full bg-[#dbcdf3] rounded-lg font-semibold placeholder-opaque-black p-3 text-black mt-10"
-                style={{ width: "100%", height: "18rem" }}
+                className="bg-[#dbcdf3] rounded-lg font-semibold placeholder-opaque-black p-3 text-black mt-10 w-full md:w-4/5 lg:w-full"
+                style={{ height: "18rem" }}
                 name="message"
                 placeholder="MESSAGE"
                 rows="4"
                 cols="50"
                 {...register("message", {
-                  required: true,
+                  required: false,
                   maxLength: 2000,
                 })}
               />
               {errors.message && (
-                <p className="text-[#FF0000] mb-1">
-                  {errors.message.type === "required" &&
-                    "This field is required."}
+                <p className="text-[#FF0000] mt-1 absolute">
                   {errors.message.type === "maxLength" &&
                     "Max length is 2000 char."}
                 </p>
               )}
               <br></br>
               <button
-                className="p-5 w-48 bg-yellow rounded-full font-semibold text-deep-blue mt-5 hover:bg-[#0d031a] hover:text-white transition duration-500"
+                className="p-3 w-32 bg-yellow rounded-full font-semibold text-deep-blue mt-5 hover:bg-[#0d031a] hover:text-white transition duration-500 mt-10"
                 type="submit"
               >
                 SEND
