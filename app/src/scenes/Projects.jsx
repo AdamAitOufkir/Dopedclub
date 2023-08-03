@@ -2,25 +2,10 @@ import LineGradient from "../components/LineGradient";
 import { motion } from "framer-motion";
 import Preview from "./Preview";
 
-const container = {
-  hidden: {},
-  visible: {
-    transition: {
-      staggerChildren: 0.2,
-    },
-  },
-};
-
-const projectVariant = {
-  hidden: { opacity: 0, scale: 0.8 },
-  visible: { opacity: 1, scale: 1 },
-};
-
-
 const Projects = () => {
   return (
     <section id="projects" className="pt-10">
-            <motion.div
+      <motion.div
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.5 }}
@@ -31,17 +16,17 @@ const Projects = () => {
         }}
       >
         <p className="text-center text-7xl">
-           <span className="text-yellow">Our</span> Projects
+          <span className="text-yellow">Our</span> Projects
         </p>
         <div className="flex justify-center mt-5 mb-10">
           <LineGradient width="w-2/3" />
         </div>
 
         <p className="mb-20 text-center  ">
-        Check out some of OUR projects in multiple fields !
+          Check out some of OUR projects in multiple fields !
         </p>
       </motion.div>
-        <Preview></Preview>
+      <Preview />
     </section>
   );
 };

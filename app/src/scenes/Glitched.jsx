@@ -29,13 +29,30 @@ const Glitched = () => {
   }, [])
 
   return (
-    <div className="h-full flex justify-center items-center">
-      <h1 className="text-white text-8xl font-bold uppercase relative inline-block">
-        <span id="before-te1" className="absolute top-0 left-0.5 w-full h-full bg-transparent" style={{ textShadow: "-2px 0 #fce700", clipPath: "rect(24px, 550px, 90px, 0)" }} aria-hidden="true">DOPEDCLUB</span> {/* glitch::before */}
-        DOPEDCLUB
-        <span id="after-te1" className="absolute top-0 -left-0.5 w-full h-full bg-transparent" style={{ textShadow: "-2px 0 spin(#fce700, 180)", clipPath: "rect(85px, 550px, 140px, 0)" }} aria-hidden="true">DOPEDCLUB</span> {/* glitch::after */}
-      </h1>
-    </div>
+<div className="h-full flex justify-center items-center">
+  <h1 className="text-white text-6xl md:text-6xl lg:text-8xl font-bold uppercase relative inline-block">
+    <span
+      id="before-te1"
+      className="absolute top-0 left-0.5 w-full h-full bg-transparent"
+      style={{ textShadow: "-2px 0 #fce700", clipPath: "rect(24px, 550px, 90px, 0)" }}
+      aria-hidden="true"
+    >
+      DOPEDCLUB
+    </span>
+    {/* glitch::before */}
+    DOPEDCLUB
+    <span
+      id="after-te1"
+      className="absolute top-0 -left-0.5 w-full h-full bg-transparent"
+      style={{ textShadow: "-2px 0 spin(#fce700, 180)", clipPath: "rect(85px, 550px, 140px, 0)" }}
+      aria-hidden="true"
+    >
+      DOPEDCLUB
+    </span>
+    {/* glitch::after */}
+  </h1>
+</div>
+
   )
 }
 
