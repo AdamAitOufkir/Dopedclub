@@ -25,7 +25,7 @@ const Fields = () => {
     },
   };
 
-  const categories = ["3D", "DESIGN", "SHOOTING", "ENCG"];
+  const categories = ["3D", "DESIGN", "SHOOTING", "CONTENT CREATION"];
   const [selectedCategory, setSelectedCategory] = useState("SHOOTING");
 
   const handleCategoryClick = (category) => {
@@ -43,7 +43,7 @@ const Fields = () => {
       >
         {categories.map((category, index) => (
           <div
-            style={{ cursor: "pointer" }}
+            style={{ cursor: "pointer"}}
             key={index}
             onClick={() => handleCategoryClick(category)}
           >

@@ -28,14 +28,7 @@ const MySkills = () => {
         </p>
       </motion.div>
 
-      <motion.div
-        style={{
-          background:
-            "linear-gradient(180deg,rgba(128, 128, 128, 0), rgba(255, 255, 255, 1), rgba(128, 128, 128, 0))",
-        }}
-      >
         <TrustSlider />
-      </motion.div>
     </section>
   );
 };

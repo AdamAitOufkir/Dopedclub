@@ -1,5 +1,8 @@
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
+import { Logo } from "./Media";
+import { useState } from "react";
+import Preview from "./Preview";
 
 const TrustSlider = () => {
   const responsive = {
@@ -21,213 +24,47 @@ const TrustSlider = () => {
       items: 1,
     },
   };
+
+  const [selectedCategory, setSelectedCategory] = useState();
+
+  const handleCategoryClick = (category) => {
+    setSelectedCategory(category);
+  };
+
   return (
-    <Carousel
-      responsive={responsive}
-      autoPlay={true}
-      autoPlaySpeed={1000}
-      infinite={true}
-      removeArrowOnDeviceType={["tablet", "mobile"]}
-    >
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-          height: "100%",
-        }}
+    <div>
+      <Carousel
+        responsive={responsive}
+        autoPlay={true}
+        autoPlaySpeed={1000}
+        infinite={true}
+        removeArrowOnDeviceType={["tablet", "mobile"]}
       >
-        <img
-          src="https://i.ibb.co/hZW3S8m/Polydev.png"
-          alt=""
-          style={{
-            maxWidth: "100%",
-            maxHeight: "100%",
-            objectFit: "contain",
-          }}
-        />
-      </div>
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-          height: "100%",
-        }}
-      >
-        <img
-          src="https://i.ibb.co/kDvKBNC/Mo9awil.png"
-          alt=""
-          style={{
-            Width: "100%",
-            Height: "100%",
-            objectFit: "contain",
-          }}
-        />
-      </div>
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-          height: "100%",
-        }}
-      >
-        <img
-          src="https://i.ibb.co/5BXZszW/Logo-El-kettani-habitat.png"
-          alt=""
-          style={{
-            maxWidth: "50%",
-            maxHeight: "50%",
-            objectFit: "contain",
-          }}
-        />
-      </div>
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-          height: "100%",
-        }}
-      >
-        <img
-          src="https://i.ibb.co/nRcztcK/Ma2.png"
-          alt=""
-          style={{
-            maxWidth: "100%",
-            maxHeight: "100%",
-            objectFit: "contain",
-          }}
-        />
-      </div>
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-          height: "100%",
-        }}
-      >
-        <img
-          src="https://i.ibb.co/grRTN2c/LOGO-2.png"
-          alt=""
-          style={{
-            maxWidth: "60%",
-            maxHeight: "60%",
-            objectFit: "contain",
-          }}
-        />
-      </div>
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-          height: "100%",
-        }}
-      >
-        <img
-          src="https://i.ibb.co/3TJtcCV/1200px-M-venpick-Logo-svg.png"
-          alt=""
-          style={{
-            maxWidth: "100%",
-            maxHeight: "100%",
-            objectFit: "contain",
-          }}
-        />
-      </div>
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-          height: "100%",
-        }}
-      >
-        <img
-          src="https://i.ibb.co/pRDzwBH/opera.png"
-          alt=""
-          style={{
-            maxWidth: "100%",
-            maxHeight: "100%",
-            objectFit: "contain",
-          }}
-        />
-      </div>
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-          height: "100%",
-        }}
-      >
-        <img
-          src="https://i.ibb.co/LCQcZms/Anatolia.png"
-          alt=""
-          style={{
-            maxWidth: "100%",
-            maxHeight: "100%",
-            objectFit: "contain",
-          }}
-        />
-      </div>
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-          height: "100%",
-        }}
-      >
-        <img
-          src="https://i.ibb.co/S6MKvd9/DEROUA-POOL-LOGO-PNG.png"
-          alt=""
-          style={{
-            maxWidth: "50%",
-            maxHeight: "50%",
-            objectFit: "contain",
-          }}
-        />
-      </div>
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-          height: "100%",
-        }}
-      >
-        <img
-          src="https://i.ibb.co/rpdK98K/HERITIMA-LOGO-3.png"
-          alt=""
-          style={{
-            maxWidth: "60%",
-            maxHeight: "60%",
-            objectFit: "contain",
-          }}
-        />
-      </div>
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-          height: "100%",
-        }}
-      >
-        <img
-          src="https://i.ibb.co/4Tx3N7N/logo-TCG-orange-bland.png"
-          alt=""
-          style={{
-            maxWidth: "60%",
-            maxHeight: "60%",
-            objectFit: "contain",
-          }}
-        />
-      </div>
-    </Carousel>
+        {Logo.map((file, index) => (
+          <div
+            className="cursor-pointer"
+            key={index}
+            onClick={() => handleCategoryClick(file.category)}
+            style={{ margin: "4rem" }}
+          >
+            <img
+              src={file.url}
+              alt={file.url}
+              style={{
+                width: "50%",
+                aspectRatio: "4/3",
+                objectFit: "contain",
+              }}
+            />
+          </div>
+        ))}
+      </Carousel>
+      {selectedCategory && (
+        <div>
+          <Preview selectedCategory={selectedCategory} />
+        </div>
+      )}
+    </div>
   );
 };
 
