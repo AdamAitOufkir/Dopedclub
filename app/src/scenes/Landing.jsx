@@ -35,13 +35,13 @@ const Landing = ({ setSelectedPage }) => {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.5 }}
-          transition={{ duration: 0.5 }}
+          transition={{ duration: 1.5 }}
           variants={{
             hidden: { opacity: 0, x: -50 },
             visible: { opacity: 1, x: 0 },
           }}
         >
-          <Glitched/>
+          <Glitched Title="DopedClub"/>
           <p className="mt-10 mb-7 text-sm text-center md:text-start text">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero nisi ipsum, ab laudantium commodi cumque architecto voluptate error, 
           voluptatem excepturi quaerat impedit mollitia laborum. Natus eligendi quod omnis et explicabo?

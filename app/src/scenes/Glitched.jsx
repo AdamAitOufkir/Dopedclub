@@ -1,7 +1,7 @@
 
 import React, { useEffect } from 'react'
 
-const Glitched = () => {
+const Glitched = ({Title}) => {
 
   useEffect(() => {
     let style1 = document.createElement("style")
@@ -37,17 +37,17 @@ const Glitched = () => {
       style={{ textShadow: "-2px 0 #fce700", clipPath: "rect(24px, 550px, 90px, 0)" }}
       aria-hidden="true"
     >
-      DOPEDCLUB
+      {Title}
     </span>
     {/* glitch::before */}
-    DOPEDCLUB
+    {Title}
     <span
       id="after-te1"
       className="absolute top-0 -left-0.5 w-full h-full bg-transparent"
       style={{ textShadow: "-2px 0 spin(#fce700, 180)", clipPath: "rect(85px, 550px, 140px, 0)" }}
       aria-hidden="true"
     >
-      DOPEDCLUB
+      {Title}
     </span>
     {/* glitch::after */}
   </h1>

@@ -1,6 +1,20 @@
 export const Media = [
-    {type: 'image', url: require('./Bricks.jpeg')},
-    {type: 'image', url: require('./DopedCard.jpeg')},
-    {type: 'video', url: require('./bm.mp4')},
-    {type: 'video', url: require('./marchii.mp4')}
-]
+    { type: 'image', url: require('./3D/Bricks.jpeg'), category: '3D' },
+    { type: 'video', url: require('./3D/bm.mp4'), category: '3D' },
+    { type: 'image', url: require('./3D/DopedCard.jpeg'), category: '3D' },
+    { type: 'video', url: require('./3D/marchii.mp4'), category: '3D' },
+    { type: 'video', url: require('./3D/archipres.mp4'), category: '3D' },
+    { type: 'image', url: require('./SHOOTING/SHOT 1.jpeg'), category: 'SHOOTING' },
+    { type: 'image', url: require('./SHOOTING/SHOT 2.jpeg'), category: 'SHOOTING' },
+    { type: 'image', url: require('./SHOOTING/SHOT 3.jpeg'), category: 'SHOOTING' },
+    { type: 'image', url: require('./SHOOTING/SHOT 4.jpeg'), category: 'SHOOTING' },
+    { type: 'image', url: require('./SHOOTING/SHOT 5.jpeg'), category: 'SHOOTING' },
+    { type: 'image', url: require('./SHOOTING/TWIN 2.jpeg'), category: 'SHOOTING' },
+    { type: 'image', url: require('./SHOOTING/TWIN 3.jpeg'), category: 'SHOOTING' },
+    { type: 'image', url: require('./SHOOTING/TWIN.jpeg'), category: 'SHOOTING' },
+    { type: 'image', url: require('./SHOOTING/SHOT 6.jpeg'), category: 'SHOOTING' },
+    { type: 'image', url: require('./SHOOTING/SHOT 7.jpeg'), category: 'SHOOTING' },
+    { type: 'image', url: require('./SHOOTING/SHOT 8.jpeg'), category: 'SHOOTING' },
+    { type: 'image', url: require('./SHOOTING/SHOT 9.jpeg'), category: 'SHOOTING' },
+  ];
+  

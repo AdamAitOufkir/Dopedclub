@@ -3,8 +3,6 @@ import TrustSlider from "./TrustSlider";
 import LineGradient from "../components/LineGradient";
 
 const MySkills = () => {
-
-
   return (
     <section id="skills" className="pt-10 ">
       <motion.div
@@ -36,9 +34,8 @@ const MySkills = () => {
             "linear-gradient(180deg,rgba(128, 128, 128, 0), rgba(255, 255, 255, 1), rgba(128, 128, 128, 0))",
         }}
       >
-          <TrustSlider />
+        <TrustSlider />
       </motion.div>
-
     </section>
   );
 };

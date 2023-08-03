@@ -1,7 +1,6 @@
 import LineGradient from "../components/LineGradient";
 import { motion } from "framer-motion";
-import Preview from "./Preview";
-
+import Fields from "./Fields";
 const Projects = () => {
   return (
     <section id="projects" className="pt-10">
@@ -23,10 +22,11 @@ const Projects = () => {
         </div>
 
         <p className="mb-20 text-center  ">
-          Check out some of OUR projects in multiple fields !
+          Select a category to view some of our Projects 
         </p>
       </motion.div>
-      <Preview />
+
+      <Fields />
     </section>
   );
 };
