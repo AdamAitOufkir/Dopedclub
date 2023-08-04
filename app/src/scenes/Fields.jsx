@@ -39,7 +39,6 @@ const Fields = () => {
         autoPlay={true}
         autoPlaySpeed={5000}
         infinite={true}
-        removeArrowOnDeviceType={["tablet", "mobile"]}
       >
         {categories.map((category, index) => (
           <div

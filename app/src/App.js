@@ -12,6 +12,8 @@ import Testimonials from "./scenes/Testimonials";
 import { motion } from "framer-motion";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
   const [selectedPage, setSelectedPage] = useState("home");
@@ -83,13 +85,15 @@ function App() {
         </motion.div>
       </div> */}
       <LineGradient />
+      <ToastContainer />
       <div className="w-5/6 mx-auto md:h-full">
         <motion.div
           margin="0 0 -200px 0"
           amount="all"
           onViewportEnter={() => setSelectedPage("contact")}
         >
-          <Contact />
+          <Contact>
+          </Contact>
         </motion.div>
       </div>
       <Footer />

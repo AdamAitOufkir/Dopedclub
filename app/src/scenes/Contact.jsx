@@ -1,21 +1,32 @@
+import { useRef } from "react";
 import LineGradient from "../components/LineGradient";
-import { useForm } from "react-hook-form";
 import { motion } from "framer-motion";
+import emailjs from '@emailjs/browser';
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Contact = () => {
-  const {
-    register,
-    trigger,
-    formState: { errors },
-  } = useForm();
+const form = useRef()
 
-  const onSubmit = async (e) => {
-    console.log("~ e", e);
-    const isValid = await trigger();
-    if (!isValid) {
-      e.preventDefault();
-    }
-  };
+
+const sendEmail = (e) => {
+  e.preventDefault();
+
+  emailjs
+    .sendForm('service_6dsr8er', 'template_7omhidv', form.current, 'jYdcjd2sZ36ePkUi2')
+    .then((result) => {
+      toast.success('Your email has been sent successfully!', {
+        position: toast.POSITION.BOTTOM_RIGHT
+    });
+    })
+    .catch((error) => {
+      toast.error('Something went wrong', {
+        position: toast.POSITION.BOTTOM_RIGHT,
+      });
+    });
+
+  e.target.reset();
+};
 
   return (
     <section id="contact" className="contact mt-32 mb-16 w-full">
@@ -191,44 +202,27 @@ const Contact = () => {
             className="basis-1/2 mt-10 md:mt-0"
           >
             <form
+            ref={form} onSubmit={sendEmail}
               className=""
               target="_blank"
-              onSubmit={onSubmit}
               method="POST"
             >
               <input
                 className="bg-[#dbcdf3] rounded-full font-semibold placeholder-opaque-black p-3 text-black lg:w-full mx-auto"
                 type="text"
+                name="from_name"
                 placeholder="NAME"
-                {...register("name", {
-                  required: true,
-                  maxLength: 100,
-                })}
+                required
+                maxLength="100"
               />
-              {errors.name && (
-                <p className="text-[#FF0000] mt-1 absolute">
-                  {errors.name.type === "required" && "This field is required."}
-                  {errors.name.type === "maxLength" &&
-                    "Max length is 100 char."}
-                </p>
-              )}
+
               <input
                 className="bg-[#dbcdf3] rounded-full font-semibold placeholder-opaque-black p-3 mt-10 text-black lg:w-full mx-auto"
-                type="tel" // Change the type to "tel" for phone number
-                placeholder="PHONE NUMBER" // Update the placeholder text
-                {...register("phoneNumber", {
-                  required: true,
-                  pattern: /^[0-9]{10,}$/i, // Update the pattern to match a 10-digit phone number
-                })}
+                type="tel"
+                name="from_phone"
+                placeholder="PHONE NUMBER"
+                required
               />
-              {errors.phoneNumber && (
-                <p className="text-[#FF0000] mt-1 absolute">
-                  {errors.phoneNumber.type === "required" &&
-                    "This field is required."}
-                  {errors.phoneNumber.type === "pattern" &&
-                    "Invalid phone number."}
-                </p>
-              )}
 
               <textarea
                 className="bg-[#dbcdf3] rounded-lg font-semibold placeholder-opaque-black p-3 text-black mt-10 w-full md:w-4/5 lg:w-full"
@@ -237,17 +231,9 @@ const Contact = () => {
                 placeholder="MESSAGE"
                 rows="4"
                 cols="50"
-                {...register("message", {
-                  required: false,
-                  maxLength: 2000,
-                })}
+                maxLength="2000"
               />
-              {errors.message && (
-                <p className="text-[#FF0000] mt-1 absolute">
-                  {errors.message.type === "maxLength" &&
-                    "Max length is 2000 char."}
-                </p>
-              )}
+
               <br></br>
               <button
                 className="p-3 w-32 bg-yellow rounded-full font-semibold text-deep-blue mt-5 hover:bg-[#0d031a] hover:text-white transition duration-500 mt-10"

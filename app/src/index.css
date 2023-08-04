@@ -18,6 +18,18 @@ body,
   font-family: "Poppins", sans-serif;
 }
 
+.react-multiple-carousel__arrow.react-multiple-carousel__arrow--left,
+.react-multiple-carousel__arrow.react-multiple-carousel__arrow--right 
+{
+  z-index: 1;
+}
+.react-multiple-carousel__arrow.react-multiple-carousel__arrow--left:hover,
+.react-multiple-carousel__arrow.react-multiple-carousel__arrow--right:hover
+{
+  background-color: rgb(250, 204, 21);
+}
+
+
 .container {
   width: 95%;
   position: relative;
@@ -29,7 +41,7 @@ body,
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 5rem;
-  margin: 100px auto;
+  margin: 80px auto;
 }
 
 .container .media-container .media {
@@ -43,6 +55,21 @@ body,
   overflow: hidden;
   cursor: pointer;
 }
+
+@media (max-width: 768px) {
+  .container .media-container .media {
+    height: 10rem;
+    width: 18rem;
+  }
+}
+@media (max-width: 768px) {
+  .container .media-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
 
 .container .media-container .media :is(video, img) {
   height: 100%;

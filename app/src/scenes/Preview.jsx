@@ -26,8 +26,22 @@ const Preview = ({ selectedCategory }) => {
     setItemsToShow(itemsToShow + 8);
   };
 
+  const handleLess = () => {
+    setItemsToShow(itemsToShow - 8);
+  }
+
   return (
     <div className="container">
+      {itemsToShow > 8 && (
+      <div className="flex justify-center">
+        <button
+          onClick={handleLess}
+          className="p-3 w-32 bg-yellow rounded-full font-semibold text-deep-blue hover:bg-[#0d031a] hover:text-white transition duration-500"
+        >
+          Show less
+        </button>
+      </div>)}
+
       <div className="media-container">
         {mediaToShow.map((file, index) => (
           <motion.div

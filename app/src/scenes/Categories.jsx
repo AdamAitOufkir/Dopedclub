@@ -24,6 +24,10 @@ const Span = styled.span`
 
   transform: translate3d(0, 0, 0);
   backface-visibility: hidden;
+
+  @media screen and (max-width: 768px) {
+    font-size: 2em; 
+  }
 `;
 
 const Categories = ({ Title }) => {

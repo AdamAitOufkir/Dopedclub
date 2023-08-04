@@ -38,7 +38,6 @@ const TrustSlider = () => {
         autoPlay={true}
         autoPlaySpeed={1000}
         infinite={true}
-        removeArrowOnDeviceType={["tablet", "mobile"]}
       >
         {Logo.map((file, index) => (
           <div
@@ -52,8 +51,8 @@ const TrustSlider = () => {
               alt={file.url}
               style={{
                 width: "50%",
-                aspectRatio: "4/3",
-                objectFit: "contain",
+                aspectRatio: "3/2",
+                objectFit: "contain"
               }}
             />
           </div>

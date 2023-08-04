@@ -23,7 +23,8 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }) => {
   const navbarBackground = isTopOfPage ? "" : "bg-[#0d031a]";
 
   return (
-    <nav className={`${navbarBackground} z-40 w-full fixed top-0 py-6`}>
+    <nav className={`bg-[#0d031a] z-40 w-full fixed top-0 py-6`}
+    style={{zIndex:"100"}}>
       <div className="flex items-center justify-between mx-auto w-5/6">
         <img
           src="https://i.ibb.co/WyzKqbP/LOGO.png"
@@ -50,11 +51,11 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }) => {
               selectedPage={selectedPage}
               setSelectedPage={setSelectedPage}
             />
-            <Link
+            {/* <Link
               page="Testimonials"
               selectedPage={selectedPage}
               setSelectedPage={setSelectedPage}
-            />
+            /> */}
             <Link
               page="Contact"
               selectedPage={selectedPage}
