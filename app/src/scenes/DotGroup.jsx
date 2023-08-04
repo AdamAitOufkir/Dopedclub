@@ -1,4 +1,4 @@
-import AnchorLink from "react-anchor-link-smooth-scroll";
+import { Link } from "react-scroll";
 
 const DotGroup = ({ selectedPage, setSelectedPage }) => {
   const selectedStyles = `relative bg-yellow before:absolute before:w-6 before:h-6 before:rounded-full
@@ -6,45 +6,40 @@ const DotGroup = ({ selectedPage, setSelectedPage }) => {
 
   return (
     <div className="flex flex-col gap-6 fixed top-[60%] right-7">
-      <AnchorLink
-        href="#home"
+      <Link
         className={`${
           selectedPage === "home" ? selectedStyles : "bg-dark-grey"
-        } w-3 h-3 rounded-full`}
-        onClick={() => setSelectedPage("home")}
-      />
+        } cursor-pointer w-3 h-3 rounded-full transition duration-500`}
+        onClick={() => setSelectedPage("projects")}
+        to="home"
+        spy={true}
+        smooth={true}
+        offset={0}
+        duration={500}
+      ></Link>
 
-      <AnchorLink
-        href="#skills"
-        className={`${
-          selectedPage === "skills" ? selectedStyles : "bg-dark-grey"
-        } w-3 h-3 rounded-full`}
-        onClick={() => setSelectedPage("skills")}
-      />
-
-      <AnchorLink
-        href="#projects"
+      <Link
         className={`${
           selectedPage === "projects" ? selectedStyles : "bg-dark-grey"
-        } w-3 h-3 rounded-full`}
+        } cursor-pointer w-3 h-3 rounded-full transition duration-500`}
         onClick={() => setSelectedPage("projects")}
-      />
-
-      <AnchorLink
-        href="#testimonials"
-        className={`${
-          selectedPage === "testimonials" ? selectedStyles : "bg-dark-grey"
-        } w-3 h-3 rounded-full`}
-        onClick={() => setSelectedPage("testimonials")}
-      />
-
-      <AnchorLink
-        href="#contact"
+        to="projects"
+        spy={true}
+        smooth={true}
+        offset={50}
+        duration={500}
+      ></Link>
+      <Link
         className={`${
           selectedPage === "contact" ? selectedStyles : "bg-dark-grey"
-        } w-3 h-3 rounded-full`}
-        onClick={() => setSelectedPage("contact")}
-      />
+        } cursor-pointer w-3 h-3 rounded-full transition duration-500`}
+        onClick={() => setSelectedPage("projects")}
+        to="contact"
+        spy={true}
+        smooth={true}
+        offset={0}
+        duration={500}
+      ></Link>
     </div>
   );
 };

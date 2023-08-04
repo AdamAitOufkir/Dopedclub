@@ -1,6 +1,7 @@
 import LineGradient from "../components/LineGradient";
 import { motion } from "framer-motion";
 import Fields from "./Fields";
+
 const Projects = () => {
   return (
     <section id="projects" className="pt-10">
