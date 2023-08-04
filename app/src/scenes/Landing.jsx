@@ -1,8 +1,8 @@
 import SocialMediaIcons from "../components/SocialMediaIcons";
 import useMediaQuery from "../hooks/useMediaQuery";
 import { motion } from "framer-motion";
-import AnchorLink from "react-anchor-link-smooth-scroll";
 import Glitched from "./Glitched";
+import { Link } from "react-scroll";
 
 const Landing = ({ setSelectedPage }) => {
   const isAboveLarge = useMediaQuery("(min-width: 1060px)");
@@ -14,11 +14,11 @@ const Landing = ({ setSelectedPage }) => {
       {/* IMAGE SECTION */}
       <div className="basis-3/5 z-10 mt-4 md:mt-3 flex justify-center md:order-2">
         {isAboveLarge ? (
-            <img
-              alt="profile"
-              className="hover:filter hover:saturate-200 transition duration-500 z-10 w-full max-w-[800px] md:max-w-[1000px]"
-              src="https://i.ibb.co/WyzKqbP/LOGO.png"
-            />
+          <img
+            alt="profile"
+            className="hover:filter hover:saturate-200 transition duration-500 z-10 w-full max-w-[800px] md:max-w-[1000px]"
+            src="https://i.ibb.co/WyzKqbP/LOGO.png"
+          />
         ) : (
           <img
             alt="profile"
@@ -41,10 +41,12 @@ const Landing = ({ setSelectedPage }) => {
             visible: { opacity: 1, x: 0 },
           }}
         >
-          <Glitched Title="DopedClub"/>
+          <Glitched Title="DopedClub" />
           <p className="mt-10 mb-7 text-sm text-center md:text-start text">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero nisi ipsum, ab laudantium commodi cumque architecto voluptate error, 
-          voluptatem excepturi quaerat impedit mollitia laborum. Natus eligendi quod omnis et explicabo?
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero nisi
+            ipsum, ab laudantium commodi cumque architecto voluptate error,
+            voluptatem excepturi quaerat impedit mollitia laborum. Natus
+            eligendi quod omnis et explicabo?
           </p>
         </motion.div>
 
@@ -60,15 +62,33 @@ const Landing = ({ setSelectedPage }) => {
             visible: { opacity: 1, x: 0 },
           }}
         >
-        <AnchorLink onClick={() => setSelectedPage("contact")} href="#contact" className="text-xl mt-1 hover:text-yellow transition duration-500 inline-flex items-center">
-          Contact Us
-          <span className="ml-2" onClick={() => setSelectedPage("contact")}>
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-10 h-10 hover:stroke-yellow cursor-pointer transition duration-500">
-              <path strokeLinecap="round" strokeLinejoin="round" d="M12.75 15l3-3m0 0l-3-3m3 3h-7.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-            </svg>
-          </span>
-        </AnchorLink>
-
+          <Link
+            className="text-xl mt-1 hover:text-yellow transition duration-500 inline-flex items-center cursor-pointer"
+            onClick={() => setSelectedPage("contact")}
+            to="contact"
+            spy={true}
+            smooth={true}
+            offset={50}
+            duration={500}
+          >
+            Contact Us
+            <span className="ml-2" onClick={() => setSelectedPage("contact")}>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                strokeWidth={1.5}
+                stroke="currentColor"
+                className="w-10 h-10 hover:stroke-yellow cursor-pointer transition duration-500"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M12.75 15l3-3m0 0l-3-3m3 3h-7.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                />
+              </svg>
+            </span>
+          </Link>
         </motion.div>
 
         <motion.div

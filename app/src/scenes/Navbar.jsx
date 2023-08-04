@@ -117,7 +117,7 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }) => {
               className={`${
                 selectedPage === "contact" ? "text-yellow" : ""
               } cursor-pointer hover:text-yellow transition duration-500`}
-              onClick={() => setSelectedPage("projects")}
+              onClick={() => setSelectedPage("contact")}
               to="contact"
               spy={true}
               smooth={true}
