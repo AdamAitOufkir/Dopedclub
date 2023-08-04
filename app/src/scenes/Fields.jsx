@@ -25,7 +25,7 @@ const Fields = () => {
     },
   };
 
-  const categories = ["3D", "DESIGN", "SHOOTING", "CONTENT CREATION"];
+  const categories = ["3D", "DESIGN", "SHOOTING", "CONTENT"];
   const [selectedCategory, setSelectedCategory] = useState("SHOOTING");
 
   const handleCategoryClick = (category) => {
@@ -36,12 +36,13 @@ const Fields = () => {
     <div>
       <Carousel
         responsive={responsive}
-        autoPlay={true}
+        autoPlay={false}
         autoPlaySpeed={5000}
         infinite={true}
       >
         {categories.map((category, index) => (
           <div
+          // className="flex justify-center align-center"
             style={{ cursor: "pointer"}}
             key={index}
             onClick={() => handleCategoryClick(category)}

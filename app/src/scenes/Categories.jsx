@@ -6,13 +6,13 @@ const aitfAnimation = keyframes`
   100% { background-position: 100% 50%; }
 `;
 
-
 const Span = styled.span`
   font: 700 4em/1 'Oswald', sans-serif;
   letter-spacing: 0;
   padding: .25em 0 .325em;
-  display: block;
-  margin: 0 auto;
+  display: flex; /* Use flexbox */
+  align-items: center; /* Center vertically */
+  justify-content: center; /* Center horizontally */
   text-shadow: 0 0 20px rgba(255, 255, 255, .5);
 
   background: url(https://i.ibb.co/QM42g0Q/yellowcategory.png) repeat-y;
@@ -25,14 +25,17 @@ const Span = styled.span`
   transform: translate3d(0, 0, 0);
   backface-visibility: hidden;
 
+  @media screen and (max-width: 1280px) {
+    font-size: 2.2em;
+  }
   @media screen and (max-width: 768px) {
-    font-size: 2em; 
+    font-size: 2em;
   }
 `;
 
 const Categories = ({ Title }) => {
   return (
-        <Span>{Title}</Span>
+    <Span>{Title}</Span>
   );
 };
 

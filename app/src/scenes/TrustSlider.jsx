@@ -32,38 +32,45 @@ const TrustSlider = () => {
   };
 
   return (
-    <div>
-      <Carousel
-        responsive={responsive}
-        autoPlay={true}
-        autoPlaySpeed={1000}
-        infinite={true}
+<div>
+  <Carousel
+    responsive={responsive}
+    autoPlay={true}
+    autoPlaySpeed={1000}
+    infinite={true}
+  >
+    {Logo.map((file, index) => (
+      <div
+        className="cursor-pointer"
+        key={index}
+        onClick={() => handleCategoryClick(file.category)}
+        style={{
+          display: "flex", 
+          alignItems: "center",
+          justifyContent: "center", 
+          width: "100%",
+          height: "100%",
+        }}
       >
-        {Logo.map((file, index) => (
-          <div
-            className="cursor-pointer"
-            key={index}
-            onClick={() => handleCategoryClick(file.category)}
-            style={{ margin: "4rem" }}
-          >
-            <img
-              src={file.url}
-              alt={file.url}
-              style={{
-                width: "50%",
-                aspectRatio: "3/2",
-                objectFit: "contain"
-              }}
-            />
-          </div>
-        ))}
-      </Carousel>
-      {selectedCategory && (
-        <div>
-          <Preview selectedCategory={selectedCategory} />
-        </div>
-      )}
+        <img
+          src={file.url}
+          alt={file.url}
+          style={{
+            maxWidth: "50%",
+            maxHeight: "50%",
+            objectFit: "contain", 
+          }}
+        />
+      </div>
+    ))}
+  </Carousel>
+  {selectedCategory && (
+    <div>
+      <Preview selectedCategory={selectedCategory} />
     </div>
+  )}
+</div>
+
   );
 };
 
