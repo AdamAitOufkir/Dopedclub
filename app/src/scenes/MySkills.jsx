@@ -15,20 +15,19 @@ const MySkills = () => {
           visible: { opacity: 1, x: 0 },
         }}
       >
-        <p className="text-center text-7xl">
+        <p className="font-semibold text-6xl text-center">
           They trust <span className="text-yellow">US</span>
         </p>
-        <div className="flex justify-center mt-5 mb-28">
+        <div className="flex justify-center mt-5 mb-10">
           <LineGradient width="w-2/3" />
         </div>
 
-        <p className="mt-10 mb-7 text-center  ">
-          Aliquam, amet dui feugiat facilisi dui. Aliquam aliquet integer ut
-          fames odio in at.
+        <p className="lg:text-2xl sm:text-1xl text-center  ">
+          We collaborated to make it happen, CLICK on the LOGO to see Magic
         </p>
       </motion.div>
 
-        <TrustSlider />
+      <TrustSlider />
     </section>
   );
 };

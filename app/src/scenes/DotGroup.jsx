@@ -31,9 +31,20 @@ const DotGroup = ({ selectedPage, setSelectedPage }) => {
       ></Link>
       <Link
         className={`${
+          selectedPage === "services" ? selectedStyles : "bg-dark-grey"
+        } cursor-pointer w-3 h-3 rounded-full transition duration-500`}
+        onClick={() => setSelectedPage("services")}
+        to="services"
+        spy={true}
+        smooth={true}
+        offset={-250}
+        duration={500}
+      ></Link>
+      <Link
+        className={`${
           selectedPage === "contact" ? selectedStyles : "bg-dark-grey"
         } cursor-pointer w-3 h-3 rounded-full transition duration-500`}
-        onClick={() => setSelectedPage("projects")}
+        onClick={() => setSelectedPage("contact")}
         to="contact"
         spy={true}
         smooth={true}

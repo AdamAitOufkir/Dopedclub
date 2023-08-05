@@ -1,36 +1,38 @@
 import { useRef } from "react";
 import LineGradient from "../components/LineGradient";
 import { motion } from "framer-motion";
-import emailjs from '@emailjs/browser';
-import { toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
-
+import emailjs from "@emailjs/browser";
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 const Contact = () => {
-const form = useRef()
+  const form = useRef();
 
+  const sendEmail = (e) => {
+    e.preventDefault();
 
-const sendEmail = (e) => {
-  e.preventDefault();
-
-  emailjs
-    .sendForm('service_6dsr8er', 'template_7omhidv', form.current, 'jYdcjd2sZ36ePkUi2')
-    .then((result) => {
-      toast.success('Your email has been sent successfully!', {
-        position: toast.POSITION.BOTTOM_RIGHT
-    });
-    })
-    .catch((error) => {
-      toast.error('Something went wrong', {
-        position: toast.POSITION.BOTTOM_RIGHT,
+    emailjs
+      .sendForm(
+        "service_6dsr8er",
+        "template_7omhidv",
+        form.current,
+        "jYdcjd2sZ36ePkUi2"
+      )
+      .then((result) => {
+        toast.success("Your email has been sent successfully!", {
+          position: toast.POSITION.BOTTOM_RIGHT,
+        });
+      })
+      .catch((error) => {
+        toast.error("Something went wrong", {
+          position: toast.POSITION.BOTTOM_RIGHT,
+        });
       });
-    });
 
-  e.target.reset();
-};
+    e.target.reset();
+  };
 
   return (
     <section id="contact" className="contact mt-32 mb-16 w-full">
-      {/* HEADINGS */}
       <motion.div
         initial="hidden"
         whileInView="visible"
@@ -43,9 +45,8 @@ const sendEmail = (e) => {
         className="flex justify-end w-full"
       ></motion.div>
 
-      {/* FORM & IMAGE */}
       <div className="md:flex mt-5">
-        <div class="flex flex-col">
+        <div class="flex flex-col items-center md:items-start">
           <motion.div
             initial="hidden"
             whileInView="visible"
@@ -202,7 +203,8 @@ const sendEmail = (e) => {
             className="basis-1/2 mt-10 md:mt-0"
           >
             <form
-            ref={form} onSubmit={sendEmail}
+              ref={form}
+              onSubmit={sendEmail}
               className=""
               target="_blank"
               method="POST"

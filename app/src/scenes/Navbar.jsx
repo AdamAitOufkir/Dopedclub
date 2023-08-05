@@ -54,9 +54,23 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }) => {
 
             <Link
               className={`${
+                selectedPage === "services" ? "text-yellow" : ""
+              } cursor-pointer hover:text-yellow transition duration-500`}
+              onClick={() => setSelectedPage("services")}
+              to="services"
+              spy={true}
+              smooth={true}
+              offset={-250}
+              duration={500}
+            >
+              Services
+            </Link>
+
+            <Link
+              className={`${
                 selectedPage === "contact" ? "text-yellow" : ""
               } cursor-pointer hover:text-yellow transition duration-500`}
-              onClick={() => setSelectedPage("projects")}
+              onClick={() => setSelectedPage("contact")}
               to="contact"
               spy={true}
               smooth={true}
@@ -111,6 +125,20 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }) => {
               duration={500}
             >
               Projects
+            </Link>
+
+            <Link
+              className={`${
+                selectedPage === "services" ? "text-yellow" : ""
+              } cursor-pointer hover:text-yellow transition duration-500`}
+              onClick={() => setSelectedPage("services")}
+              to="services"
+              spy={true}
+              smooth={true}
+              offset={-150}
+              duration={500}
+            >
+              Services
             </Link>
 
             <Link

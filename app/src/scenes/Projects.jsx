@@ -15,15 +15,15 @@ const Projects = () => {
           visible: { opacity: 1, x: 0 },
         }}
       >
-        <p className="text-center text-7xl">
+        <p className="text-center font-semibold text-6xl ">
           <span className="text-yellow">Our</span> Projects
         </p>
         <div className="flex justify-center mt-5 mb-10">
           <LineGradient width="w-2/3" />
         </div>
 
-        <p className="mb-20 text-center  ">
-          Select a category to view some of our Projects 
+        <p className="mb-20 lg:text-2xl sm:text-1xl text-center">
+          Made with Hard Work & Pure Love, Click the Category to see Magic
         </p>
       </motion.div>
 

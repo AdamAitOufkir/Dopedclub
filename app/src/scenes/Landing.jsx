@@ -43,10 +43,14 @@ const Landing = ({ setSelectedPage }) => {
         >
           <Glitched Title="DopedClub" />
           <p className="mt-10 mb-7 text-sm text-center md:text-start text">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero nisi
-            ipsum, ab laudantium commodi cumque architecto voluptate error,
-            voluptatem excepturi quaerat impedit mollitia laborum. Natus
-            eligendi quod omnis et explicabo?
+            We are the marketing agency that knows no limits. Driven by our
+            mission to be Creative, break the boundaries, and revolutionize your
+            industry. Our vision is to be the marketing agency that leads the
+            way. We are the rebels, the innovators, the trailblazers. BEYOND
+            CREATIVITY Our mission is to build your brand, engage your audience,
+            and grow your business. Our vision is to be the marketing agency
+            that creates value. The marketing agency that captivates your
+            customers.
           </p>
         </motion.div>
 
@@ -68,7 +72,7 @@ const Landing = ({ setSelectedPage }) => {
             to="contact"
             spy={true}
             smooth={true}
-            offset={50}
+            offset={-250}
             duration={500}
           >
             Contact Us

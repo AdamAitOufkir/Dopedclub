@@ -59,7 +59,7 @@ function App() {
         <motion.div
           margin="0 0 -200px 0"
           amount="all"
-          onViewportEnter={() => setSelectedPage("skills")}
+          onViewportEnter={() => setSelectedPage("home")}
         >
           <MySkills />
         </motion.div>
@@ -75,15 +75,17 @@ function App() {
         </motion.div>
       </div>
       <LineGradient />
-      {/* <div className="w-5/6 mx-auto md:h-full">
+
+       <div className="w-5/6 mx-auto md:h-full">
         <motion.div
           margin="0 0 -200px 0"
           amount="all"
-          onViewportEnter={() => setSelectedPage("testimonials")}
+          onViewportEnter={() => setSelectedPage("services")}
         >
           <Testimonials />
         </motion.div>
-      </div> */}
+      </div>
+
       <LineGradient />
       <ToastContainer />
       <div className="w-5/6 mx-auto md:h-full">
@@ -96,7 +98,7 @@ function App() {
           </Contact>
         </motion.div>
       </div>
-      <Footer />
+      <Footer/>
     </div>
   );
 }
