@@ -14,6 +14,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import Preloader from "./scenes/Preloader";
 
 function App() {
   const [selectedPage, setSelectedPage] = useState("home");
@@ -34,6 +35,7 @@ function App() {
 
   return (
     <div>
+      <Preloader />
       <Navbar
         isTopOfPage={isTopOfPage}
         selectedPage={selectedPage}
