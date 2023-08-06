@@ -25,7 +25,7 @@ const Fields = () => {
     },
   };
 
-  const categories = ["3D", "DESIGN", "SHOOTING", "CONTENT"];
+  const categories = ["3D", "DESIGN", "SHOOTING", "CONTENT","REELS"];
   const [selectedCategory, setSelectedCategory] = useState("SHOOTING");
 
   const handleCategoryClick = (category) => {
