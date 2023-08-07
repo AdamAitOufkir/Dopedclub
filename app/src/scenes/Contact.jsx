@@ -95,7 +95,7 @@ const Contact = () => {
                 />
               </svg>
               <p className="font-poppins font-semibold text-xl my-2">
-                dopedclub@gmail.com
+                contact@dopedclub.com
               </p>
             </div>
           </motion.div>
