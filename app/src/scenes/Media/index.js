@@ -1,9 +1,7 @@
 export const Media = [
-  { type: "image", url: require("./3D/Bricks.jpeg"), category: "3D" },
-  { type: "video", url: require("./3D/bm.mp4"), category: "3D" },
-  { type: "image", url: require("./3D/DopedCard.jpeg"), category: "3D" },
-  { type: "video", url: require("./3D/marchii.mp4"), category: "3D" },
-  { type: "video", url: require("./3D/archipres.mp4"), category: "3D" },
+  { type: "image", url: require("./3D/Bricks.webp"), category: "3D" },
+  { type: "image", url: require("./3D/DopedCard.webp"), category: "3D" },
+
   {
     type: "image",
     url: require("./SHOOTING/SHOT 2.webp"),
