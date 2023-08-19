@@ -3,19 +3,21 @@ import { preLoaderAnim } from "./Animation";
 import { Animated } from "./Animation";
 
 const Preloader = () => {
-    const gifItem = Animated[0]
-  useEffect(() => {
-    preLoaderAnim()
-  }, []);
-  return (
-    <div className="preloader">
-      <div className="preloader-container">
-      {gifItem.type === 'gif' && (
-          <img src={gifItem.url} alt="Loading..." />
-        )}
-      </div>
-    </div>
-  );
+    const videoItem = Animated[0];
+  
+    useEffect(() => {
+        preLoaderAnim();
+    }, []);
+  
+    return (
+        <div className="preloader">
+            <div className="preloader-container">
+                {videoItem.type === 'video' && (
+                    <video src={videoItem.url} alt="Loading..." autoPlay muted />
+                )}
+            </div>
+        </div>
+    );
 };
 
 export default Preloader;

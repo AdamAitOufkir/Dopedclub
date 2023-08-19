@@ -55,6 +55,7 @@ const TrustSlider = () => {
         <img
           src={file.url}
           alt={file.url}
+          loading="lazy"
           style={{
             maxWidth: "50%",
             maxHeight: "50%",

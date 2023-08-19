@@ -46,7 +46,7 @@ const Contact = () => {
       ></motion.div>
 
       <div className="md:flex mt-5">
-        <div class="flex flex-col items-center md:items-start">
+        <div className="flex flex-col items-center md:items-start">
           <motion.div
             initial="hidden"
             whileInView="visible"

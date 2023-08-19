@@ -10,7 +10,8 @@ body,
 #root,
 .app {
   height: 100%;
-  background-color: #4f1d6b;
+  background: rgb(61,15,93);
+  background: linear-gradient(90deg, rgba(61,15,93,1) 0%, rgba(118,67,148,1) 48%, rgba(61,15,93,1) 100%);
   background-size: cover;
   color: white;
   font-family: "Poppins", sans-serif;
@@ -38,7 +39,7 @@ body,
   overflow: hidden;
 }
 
-.preloader .preloader-container img{
+.preloader .preloader-container video{
 height: 100vh;
 width: auto;
 object-fit: contain;
@@ -66,7 +67,9 @@ object-fit: contain;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 5rem;
-  margin: 80px auto;
+  margin: 0 auto;
+  margin-bottom: 80px ;
+  margin-top: 0px;
 }
 
 .container .media-container .media {

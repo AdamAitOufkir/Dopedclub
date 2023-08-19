@@ -9,6 +9,7 @@ import IconButton from "@mui/material/IconButton";
 import Typography from "@mui/material/Typography";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import { CardActions } from "@mui/material";
+import { Doped } from "./Media";
 
 const ExpandMore = styled((props) => {
   const { expand, ...other } = props;
@@ -20,7 +21,7 @@ const ExpandMore = styled((props) => {
     duration: theme.transitions.duration.shortest,
   }),
 }));
-
+const doped = Doped[0]
 export default function ProdCard() {
   const [expanded, setExpanded] = React.useState(false);
 
@@ -50,7 +51,7 @@ export default function ProdCard() {
         }}
         avatar={
           <Avatar sx={{ backgroundColor: "transparent" }}>
-            <img src="https://i.ibb.co/fFYYRNx/icon.png" alt="" />
+            <img src={doped.url} alt="" />
           </Avatar>
         }
         title="Dope Prod"

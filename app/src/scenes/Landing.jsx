@@ -3,6 +3,8 @@ import useMediaQuery from "../hooks/useMediaQuery";
 import { motion } from "framer-motion";
 import Glitched from "./Glitched";
 import { Link } from "react-scroll";
+import { Doped } from "./Media";
+const doped = Doped[0]
 
 const Landing = ({ setSelectedPage }) => {
   const isAboveLarge = useMediaQuery("(min-width: 1060px)");
@@ -17,13 +19,13 @@ const Landing = ({ setSelectedPage }) => {
           <img
             alt="profile"
             className="hover:filter hover:saturate-200 transition duration-500 z-10 w-full max-w-[800px] md:max-w-[1000px]"
-            src="https://i.ibb.co/WyzKqbP/LOGO.png"
+            src={doped.url}
           />
         ) : (
           <img
             alt="profile"
             className="z-10 w-full max-w-[400px] md:max-w-[600px]"
-            src="https://i.ibb.co/WyzKqbP/LOGO.png"
+            src={doped.url}
           />
         )}
       </div>

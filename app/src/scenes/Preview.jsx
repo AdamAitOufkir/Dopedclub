@@ -36,7 +36,7 @@ const Preview = ({ selectedCategory }) => {
       <div className="flex justify-center">
         <button
           onClick={handleLess}
-          className="p-3 w-32 bg-yellow rounded-full font-semibold text-deep-blue hover:bg-[#0d031a] hover:text-white transition duration-500"
+          className="p-3 w-32 bg-yellow rounded-full font-semibold text-deep-blue hover:bg-[#0d031a] hover:text-white transition duration-500 mb-10"
         >
           Show less
         </button>
@@ -57,7 +57,7 @@ const Preview = ({ selectedCategory }) => {
           >
             <div className="media" onClick={() => setSelectedFile(file)}>
               {file.type === "image" ? (
-                <img src={file.url} alt={file} />
+                <img src={file.url} alt={file} loading="lazy"/>
               ) : (
                 <video src={file.url} muted />
               )}

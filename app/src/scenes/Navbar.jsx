@@ -1,10 +1,12 @@
 import { useState } from "react";
 import useMediaQuery from "../hooks/useMediaQuery";
 import { Link } from "react-scroll";
+import { Doped } from "./Media";
 
 const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }) => {
   const [isMenuToggled, setIsMenuToggled] = useState(false);
   const isDesktop = useMediaQuery("(min-width: 768px)");
+  const doped = Doped[0]
 
   return (
     <nav
@@ -15,7 +17,7 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }) => {
     >
       <div className="flex items-center justify-between mx-auto w-5/6">
         <img
-          src="https://i.ibb.co/WyzKqbP/LOGO.png"
+          src={doped.url}
           alt="Logo"
           className="h-24 w-24"
           style={{ margin: "-30px 0" }}
