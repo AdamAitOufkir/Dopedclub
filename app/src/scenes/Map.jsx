@@ -6,6 +6,7 @@ const Map = () => {
       allowfullscreen=""
       loading="lazy"
       referrerpolicy="no-referrer-when-downgrade"
+      title="location"
     ></iframe>
   );
 };

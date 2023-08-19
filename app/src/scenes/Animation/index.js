@@ -1,7 +1,7 @@
 import gsap from "gsap";
 export const Animated = [
-    { type: 'gif', url: require('./doped.gif'), category: 'logo' },
-]
+  { type: "gif", url: require("./doped.gif"), category: "logo" },
+];
 
 const tl = gsap.timeline();
 

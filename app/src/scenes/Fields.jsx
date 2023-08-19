@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import Preview from "./Preview";
-import Categories from "./Categories"
+import Categories from "./Categories";
 
 const Fields = () => {
   const responsive = {
@@ -25,8 +25,8 @@ const Fields = () => {
     },
   };
 
-  const categories = ["3D", "DESIGN", "SHOOTING", "CONTENT","REELS"];
-  const [selectedCategory, setSelectedCategory] = useState("SHOOTING");
+  const categories = ["3D", "DESIGN", "SHOOTING", "CONTENT", "REELS"];
+  const [selectedCategory, setSelectedCategory] = useState("");
 
   const handleCategoryClick = (category) => {
     setSelectedCategory(category);
@@ -42,8 +42,8 @@ const Fields = () => {
       >
         {categories.map((category, index) => (
           <div
-          // className="flex justify-center align-center"
-            style={{ cursor: "pointer"}}
+            // className="flex justify-center align-center"
+            style={{ cursor: "pointer" }}
             key={index}
             onClick={() => handleCategoryClick(category)}
           >

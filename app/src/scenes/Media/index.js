@@ -6,11 +6,6 @@ export const Media = [
   { type: "video", url: require("./3D/archipres.mp4"), category: "3D" },
   {
     type: "image",
-    url: require("./SHOOTING/SHOT 1.jpeg"),
-    category: "SHOOTING",
-  },
-  {
-    type: "image",
     url: require("./SHOOTING/SHOT 2.jpeg"),
     category: "SHOOTING",
   },
@@ -32,11 +27,6 @@ export const Media = [
   {
     type: "image",
     url: require("./SHOOTING/TWIN 2.jpeg"),
-    category: "SHOOTING",
-  },
-  {
-    type: "image",
-    url: require("./SHOOTING/TWIN 3.jpeg"),
     category: "SHOOTING",
   },
   { type: "image", url: require("./SHOOTING/TWIN.jpeg"), category: "SHOOTING" },
@@ -63,52 +53,7 @@ export const Media = [
   { type: "image", url: require("./MOVENPICK/AB.webp"), category: "MOVENPICK" },
   {
     type: "image",
-    url: require("./MOVENPICK/DSC07878.webp"),
-    category: "MOVENPICK",
-  },
-  {
-    type: "image",
-    url: require("./MOVENPICK/DSC07887.webp"),
-    category: "MOVENPICK",
-  },
-  {
-    type: "image",
-    url: require("./MOVENPICK/DSC07925.webp"),
-    category: "MOVENPICK",
-  },
-  {
-    type: "image",
-    url: require("./MOVENPICK/DSC07926.webp"),
-    category: "MOVENPICK",
-  },
-  {
-    type: "image",
     url: require("./MOVENPICK/DSC07928.webp"),
-    category: "MOVENPICK",
-  },
-  {
-    type: "image",
-    url: require("./MOVENPICK/DSC07934.webp"),
-    category: "MOVENPICK",
-  },
-  {
-    type: "image",
-    url: require("./MOVENPICK/DSC07937.webp"),
-    category: "MOVENPICK",
-  },
-  {
-    type: "image",
-    url: require("./MOVENPICK/DSC07941.webp"),
-    category: "MOVENPICK",
-  },
-  {
-    type: "image",
-    url: require("./MOVENPICK/DSC07943.webp"),
-    category: "MOVENPICK",
-  },
-  {
-    type: "image",
-    url: require("./MOVENPICK/DSC07955.webp"),
     category: "MOVENPICK",
   },
   {
@@ -144,21 +89,6 @@ export const Media = [
   {
     type: "image",
     url: require("./MOVENPICK/D_K_7484.webp"),
-    category: "MOVENPICK",
-  },
-  {
-    type: "image",
-    url: require("./MOVENPICK/D_K_7492.webp"),
-    category: "MOVENPICK",
-  },
-  {
-    type: "image",
-    url: require("./MOVENPICK/D_K_7497.webp"),
-    category: "MOVENPICK",
-  },
-  {
-    type: "image",
-    url: require("./MOVENPICK/D_K_7504.webp"),
     category: "MOVENPICK",
   },
   {
@@ -318,21 +248,6 @@ export const Media = [
   },
   {
     type: "image",
-    url: require("./CONTENTCREATION/1.png"),
-    category: "CONTENT",
-  },
-  {
-    type: "image",
-    url: require("./CONTENTCREATION/2.png"),
-    category: "CONTENT",
-  },
-  {
-    type: "image",
-    url: require("./CONTENTCREATION/3.png"),
-    category: "CONTENT",
-  },
-  {
-    type: "image",
     url: require("./CONTENTCREATION/4.jpeg"),
     category: "CONTENT",
   },
@@ -388,12 +303,6 @@ export const Media = [
   },
   {
     type: "image",
-    url: require("./CONTENTCREATION/23.png"),
-    category: "CONTENT",
-  },
-  { type: "image", url: require("./DESIGN/ADE CARD.webp"), category: "DESIGN" },
-  {
-    type: "image",
     url: require("./DESIGN/Copie de banderole.webp"),
     category: "DESIGN",
   },
@@ -437,16 +346,6 @@ export const Media = [
     url: require("./DESIGN/démo carte visite.webp"),
     category: "DESIGN",
   },
-  {
-    type: "image",
-    url: require("./DESIGN/exemple 1 carte.webp"),
-    category: "DESIGN",
-  },
-  {
-    type: "image",
-    url: require("./DESIGN/pdc fb comdabel.webp"),
-    category: "DESIGN",
-  },
   { type: "image", url: require("./POLYDEV/1.jpeg"), category: "POLYDEV" },
   { type: "image", url: require("./POLYDEV/2.jpeg"), category: "POLYDEV" },
   { type: "image", url: require("./POLYDEV/3.jpeg"), category: "POLYDEV" },
@@ -467,29 +366,15 @@ export const Media = [
     url: require("./MO9AWIL/cover fb almou9awil.webp"),
     category: "MO9AWIL",
   },
-  { type: "video", url: require("./REELS/1.mp4"), category: "REELS" },
-  {
-    type: "video",
-    url: require("./REELS/Medium Square-1.mp4"),
-    category: "REELS",
-  },
-  {
-    type: "video",
-    url: require("./REELS/story exemple.mp4"),
-    category: "REELS",
-  },
 ];
 
 export const Logo = [
   { url: require("./LOGOS/Anatolia.png"), category: "ANATOLIA" },
-  { url: require("./LOGOS/DerouaPool.png"), category: "DEROUA" },
   { url: require("./LOGOS/ElKetani.png"), category: "ELKETANI" },
-  { url: require("./LOGOS/GlitchAcademy.png"), category: "GLITCHACADEMY" },
   { url: require("./LOGOS/Coffee.png"), category: "COFFEE" },
   { url: require("./LOGOS/HERITIMA.png"), category: "HERITIMA" },
   { url: require("./LOGOS/LMO9AWALA.png"), category: "ALMO9AWALA" },
   { url: require("./LOGOS/Mo9awil.png"), category: "MO9AWIL" },
   { url: require("./LOGOS/Movenpick.png"), category: "MOVENPICK" },
-  { url: require("./LOGOS/NiceKoop.png"), category: "NICEKOOP" },
   { url: require("./LOGOS/Poly.png"), category: "POLYDEV" },
 ];

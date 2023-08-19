@@ -8,7 +8,7 @@ import Avatar from "@mui/material/Avatar";
 import IconButton from "@mui/material/IconButton";
 import Typography from "@mui/material/Typography";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
-import { CardActions, CardMedia } from "@mui/material";
+import { CardActions } from "@mui/material";
 
 const ExpandMore = styled((props) => {
   const { expand, ...other } = props;
@@ -61,13 +61,13 @@ export default function MarketingCard() {
           },
         }}
       />
-      <CardMedia
+      {/* <CardMedia
         sx={{ height: "194px" }}
         component="img"
         height="194"
         image="https://i.ibb.co/171th6z/Marketing.jpg"
         alt="Marketing"
-      />
+      /> */}
       <CardContent
         sx={{
           height: "70px",

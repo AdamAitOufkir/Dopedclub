@@ -10,11 +10,11 @@ body,
 #root,
 .app {
   height: 100%;
-  background-image: url("assets/site-bg.jpg");
-  background-image: no-repeat;
+  background-color: #4f1d6b;
   background-size: cover;
   color: white;
   font-family: "Poppins", sans-serif;
+  font-display: swap;
 }
 
 
