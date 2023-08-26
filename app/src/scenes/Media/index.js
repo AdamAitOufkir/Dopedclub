@@ -393,20 +393,33 @@ export const Media = [
   { type: "image", url: require("./YOURCOFFEE/6.webp"), category: "COFFEE" },
   { type: "image", url: require("./YOURCOFFEE/7.webp"), category: "COFFEE" },
   { type: "image", url: require("./YOURCOFFEE/8.webp"), category: "COFFEE" },
+
+  { type: "video", url: require("./NICEKOOP/1.mp4"), category: "NICEKOOP" },
+  { type: "video", url: require("./NICEKOOP/2.mp4"), category: "NICEKOOP" },
+  
+  { type: "video", url: require("./OPERA/1.mp4"), category: "OPERA" },
+  { type: "video", url: require("./OPERA/2.mp4"), category: "OPERA" },
+  { type: "video", url: require("./OPERA/3.mp4"), category: "OPERA" },
+
 ];
 
 export const Logo = [
   { url: require("./LOGOS/Anatolia.webp"), category: "ANATOLIA" },
   { url: require("./LOGOS/ElKetani.webp"), category: "ELKETANI" },
   { url: require("./LOGOS/Coffee.webp"), category: "COFFEE" },
-  { url: require("./LOGOS/HERITIMA.webp"), category: "HERITIMA" },
   { url: require("./LOGOS/LMO9AWALA.webp"), category: "ALMO9AWALA" },
   { url: require("./LOGOS/Mo9awil.webp"), category: "MO9AWIL" },
+  { url: require("./LOGOS/OPERA.webp"), category: "OPERA" },
   { url: require("./LOGOS/Movenpick.webp"), category: "MOVENPICK" },
   { url: require("./LOGOS/Poly.webp"), category: "POLYDEV" },
+  { url: require("./LOGOS/NiceKoop.webp"), category: "NICEKOOP" },
 ];
 
 
 export const Doped = [
   { type: "image", url: require("./Doped.webp"), category: "logo" },
 ];
+
+export const PlayIcon = [
+  { type: "image", url: require("./PlayIcon.webp"), category: "logo" },
+]

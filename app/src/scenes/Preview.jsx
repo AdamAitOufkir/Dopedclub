@@ -1,7 +1,8 @@
 import React, { useState } from "react";
-import { Media } from "./Media";
+import { Media, PlayIcon } from "./Media";
 import { motion } from "framer-motion";
 import { useEffect } from "react";
+
 const Preview = ({ selectedCategory }) => {
   const [selectedFile, setSelectedFile] = useState(null);
   const [itemsToShow, setItemsToShow] = useState(8);
@@ -28,19 +29,20 @@ const Preview = ({ selectedCategory }) => {
 
   const handleLess = () => {
     setItemsToShow(itemsToShow - 8);
-  }
+  };
 
   return (
     <div className="container">
       {itemsToShow > 8 && (
-      <div className="flex justify-center">
-        <button
-          onClick={handleLess}
-          className="p-3 w-32 bg-yellow rounded-full font-semibold text-deep-blue hover:bg-[#0d031a] hover:text-white transition duration-500 mb-10"
-        >
-          Show less
-        </button>
-      </div>)}
+        <div className="flex justify-center">
+          <button
+            onClick={handleLess}
+            className="p-3 w-32 bg-yellow rounded-full font-semibold text-deep-blue hover:bg-[#0d031a] hover:text-white transition duration-500 mb-10"
+          >
+            Show less
+          </button>
+        </div>
+      )}
 
       <div className="media-container">
         {mediaToShow.map((file, index) => (
@@ -57,9 +59,14 @@ const Preview = ({ selectedCategory }) => {
           >
             <div className="media" onClick={() => setSelectedFile(file)}>
               {file.type === "image" ? (
-                <img src={file.url} alt={file} loading="lazy"/>
+                <img src={file.url} alt={file} loading="lazy" />
               ) : (
-                <video src={file.url} muted />
+                <div className="video-container">
+                  <video src={file.url} muted loading="lazy" />
+                  <div className="play-button-overlay">
+                    <img src={PlayIcon[0].url} alt="Play Button" />
+                  </div>
+                </div>
               )}
             </div>
           </motion.div>
