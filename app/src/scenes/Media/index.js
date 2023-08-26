@@ -20,6 +20,16 @@ export const Media = [
   },
   {
     type: "image",
+    url: require("./SHOOTING/a.webp"),
+    category: "SHOOTING",
+  },
+  {
+    type: "image",
+    url: require("./SHOOTING/b.webp"),
+    category: "SHOOTING",
+  },
+  {
+    type: "image",
     url: require("./SHOOTING/SHOT 5.webp"),
     category: "SHOOTING",
   },
@@ -28,7 +38,13 @@ export const Media = [
     url: require("./SHOOTING/TWIN 2.webp"),
     category: "SHOOTING",
   },
+  {
+    type: "image",
+    url: require("./SHOOTING/c.webp"),
+    category: "SHOOTING",
+  },
   { type: "image", url: require("./SHOOTING/TWIN.webp"), category: "SHOOTING" },
+  { type: "image", url: require("./SHOOTING/d.webp"), category: "SHOOTING" },
   {
     type: "image",
     url: require("./SHOOTING/SHOT 6.webp"),
@@ -39,16 +55,29 @@ export const Media = [
     url: require("./SHOOTING/SHOT 7.webp"),
     category: "SHOOTING",
   },
+  { type: "image", url: require("./SHOOTING/l.webp"), category: "SHOOTING" },
+  { type: "image", url: require("./SHOOTING/m.webp"), category: "SHOOTING" },
   {
     type: "image",
     url: require("./SHOOTING/SHOT 8.webp"),
     category: "SHOOTING",
   },
+  { type: "image", url: require("./SHOOTING/e.webp"), category: "SHOOTING" },
+  { type: "image", url: require("./SHOOTING/f.webp"), category: "SHOOTING" },
   {
     type: "image",
     url: require("./SHOOTING/SHOT 9.webp"),
     category: "SHOOTING",
   },
+  { type: "image", url: require("./SHOOTING/i.webp"), category: "SHOOTING" },
+  { type: "image", url: require("./SHOOTING/j.webp"), category: "SHOOTING" },
+  { type: "image", url: require("./SHOOTING/k.webp"), category: "SHOOTING" },
+  { type: "image", url: require("./SHOOTING/g.webp"), category: "SHOOTING" },
+  { type: "image", url: require("./SHOOTING/h.webp"), category: "SHOOTING" },
+  { type: "image", url: require("./SHOOTING/n.webp"), category: "SHOOTING" },
+  { type: "image", url: require("./SHOOTING/o.webp"), category: "SHOOTING" },
+  { type: "image", url: require("./SHOOTING/p.webp"), category: "SHOOTING" },
+
   { type: "image", url: require("./MOVENPICK/AB.webp"), category: "MOVENPICK" },
   {
     type: "image",

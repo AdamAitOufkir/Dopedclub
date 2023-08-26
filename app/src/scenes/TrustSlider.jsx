@@ -36,7 +36,7 @@ const TrustSlider = () => {
   <Carousel
     responsive={responsive}
     autoPlay={true}
-    autoPlaySpeed={1000}
+    autoPlaySpeed={5000}
     infinite={true}
   >
     {Logo.map((file, index) => (
