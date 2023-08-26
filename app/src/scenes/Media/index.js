@@ -1,6 +1,7 @@
 export const Media = [
   { type: "image", url: require("./3D/Bricks.webp"), category: "3D" },
   { type: "image", url: require("./3D/DopedCard.webp"), category: "3D" },
+  { type: "video", url: require("./3D/3D.mp4"), category: "3D" },
 
   {
     type: "image",
@@ -396,11 +397,31 @@ export const Media = [
 
   { type: "video", url: require("./NICEKOOP/1.mp4"), category: "NICEKOOP" },
   { type: "video", url: require("./NICEKOOP/2.mp4"), category: "NICEKOOP" },
-  
+
   { type: "video", url: require("./OPERA/1.mp4"), category: "OPERA" },
   { type: "video", url: require("./OPERA/2.mp4"), category: "OPERA" },
   { type: "video", url: require("./OPERA/3.mp4"), category: "OPERA" },
+  { type: "video", url: require("./OPERA/4.mp4"), category: "OPERA" },
 
+  { type: "video", url: require("./CLAP/vid.mp4"), category: "CLAP" },
+  { type: "video", url: require("./CLAP/vid1.mp4"), category: "CLAP" },
+  { type: "image", url: require("./CLAP/im1.webp"), category: "CLAP" },
+  { type: "video", url: require("./CLAP/vid2.mp4"), category: "CLAP" },
+  { type: "image", url: require("./CLAP/im2.webp"), category: "CLAP" },
+  { type: "video", url: require("./CLAP/vid3.mp4"), category: "CLAP" },
+  { type: "video", url: require("./CLAP/vid4.mp4"), category: "CLAP" },
+  { type: "image", url: require("./CLAP/im3.webp"), category: "CLAP" },
+  { type: "video", url: require("./CLAP/vid5.mp4"), category: "CLAP" },
+  { type: "image", url: require("./CLAP/im4.webp"), category: "CLAP" },
+  { type: "image", url: require("./CLAP/im6.webp"), category: "CLAP" },
+  { type: "image", url: require("./CLAP/im5.webp"), category: "CLAP" },
+
+  { type: "video", url: require("./REELS/reel.mp4"), category: "REELS" },
+  { type: "video", url: require("./REELS/Reel1.mp4"), category: "REELS" },
+  { type: "video", url: require("./REELS/Reel2.mp4"), category: "REELS" },
+  { type: "video", url: require("./REELS/Reel3.mp4"), category: "REELS" },
+  { type: "video", url: require("./REELS/Reel4.mp4"), category: "REELS" },
+  { type: "video", url: require("./REELS/Reel5.mp4"), category: "REELS" },
 ];
 
 export const Logo = [
@@ -413,8 +434,8 @@ export const Logo = [
   { url: require("./LOGOS/Movenpick.webp"), category: "MOVENPICK" },
   { url: require("./LOGOS/Poly.webp"), category: "POLYDEV" },
   { url: require("./LOGOS/NiceKoop.webp"), category: "NICEKOOP" },
+  { url: require("./LOGOS/Clap.webp"), category: "CLAP" },
 ];
-
 
 export const Doped = [
   { type: "image", url: require("./Doped.webp"), category: "logo" },
@@ -422,4 +443,4 @@ export const Doped = [
 
 export const PlayIcon = [
   { type: "image", url: require("./PlayIcon.webp"), category: "logo" },
-]
+];
